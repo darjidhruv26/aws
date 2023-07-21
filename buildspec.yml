@@ -4,17 +4,13 @@ phases:
   install:
     runtime-version:
       nodejs: 16
+      
     commands:
-      - echo Installing NGINX
-      - sudo apt-get update
-      - sudo apt-get install nginx -y
       - npm install
+
   build:
     commands:
       - npm run-script build 
-  post_build:
-    commands:
-      - echo Configuring NGINX
 
 artifacts:
   files:
