@@ -2,14 +2,16 @@ version: 0.2
 
 phases:
   install:
-    runtime-version:
+    runtime-versions:
       nodejs: 16
-      
+
     commands:
+    # install npm
       - npm install
 
   build:
     commands:
+    # run build script
       - npm run-script build 
 
 artifacts:
