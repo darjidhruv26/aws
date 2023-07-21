@@ -11,12 +11,16 @@ phases:
       - npm install
   build:
     commands:
-      - echo Build started on `data`
-      - cp index.html /var/www/html/ 
+      - npm run-script build 
   post_build:
     commands:
       - echo Configuring NGINX
 
 artifacts:
   files:
-    - '**/*'         
+    - public/**/*
+    - src/**/*
+    - package.json
+    - server.js
+    - appspec.yml
+    - scripts/**/*         
